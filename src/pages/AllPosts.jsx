@@ -24,7 +24,7 @@ const AllPosts = () => {
 
   const fetchAllPosts = async () => {
     try {
-      const res = await axios.get("http://localhost:8000/api/v1/posts", {
+      const res = await axios.get("https://instaclonebackend-1.onrender.com/api/v1/posts", {
         headers: { token: `Bearer ${token}` },
       });
       setPosts(res.data);
@@ -43,7 +43,7 @@ const AllPosts = () => {
   const handleLike = async (postId) => {
     try {
       const res = await axios.post(
-        `http://localhost:8000/api/v1/${postId}/likes`,
+        `https://instaclonebackend-1.onrender.com/api/v1/${postId}/likes`,
         {},
         { headers: { token: `Bearer ${token}` } }
       );
@@ -66,7 +66,7 @@ const AllPosts = () => {
 
     try {
       const res = await axios.post(
-        `http://localhost:8000/api/v1/comment/${postId}`,
+        `https://instaclonebackend-1.onrender.com/api/v1/comment/${postId}`,
         { text },
         { headers: { token: `Bearer ${token}` } }
       );
@@ -91,7 +91,7 @@ const AllPosts = () => {
   // delete comment
   const handleDeleteComment = async (commentId, postId) => {
     try {
-      await axios.delete(`http://localhost:8000/api/v1/comment/${commentId}`, {
+      await axios.delete(`https://instaclonebackend-1.onrender.com/api/v1/comment/${commentId}`, {
         headers: { token: `Bearer ${token}` },
       });
 
@@ -115,7 +115,7 @@ const AllPosts = () => {
     if (!window.confirm("Delete this post?")) return;
 
     try {
-      await axios.delete(`http://localhost:8000/api/v1/post/${postId}`, {
+      await axios.delete(`https://instaclonebackend-1.onrender.com/api/v1/post/${postId}`, {
         headers: { token: `Bearer ${token}` },
       });
 
@@ -138,7 +138,7 @@ const AllPosts = () => {
   const handleEditSave = async () => {
     try {
       await axios.put(
-        `http://localhost:8000/api/v1/post/${editPostId}`,
+        `https://instaclonebackend-1.onrender.com/api/v1/post/${editPostId}`,
         { caption: editCaption },
         { headers: { token: `Bearer ${token}` } }
       );

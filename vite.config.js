@@ -5,8 +5,8 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/api': 'http://localhost:8000',
-      '/uploads': 'http://localhost:8000',
+      '/api': 'https://instaclonebackend-1.onrender.com',
+      '/uploads': 'https://instaclonebackend-1.onrender.com',
     }
   }
 })

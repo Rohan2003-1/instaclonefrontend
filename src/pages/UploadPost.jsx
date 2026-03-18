@@ -33,7 +33,7 @@ const UploadPost = () => {
     formData.append("caption", caption);
 
     try {
-      await axios.post("http://localhost:8000/api/v1/post", formData, {
+      await axios.post("https://instaclonebackend-1.onrender.com/api/v1/post", formData, {
         headers: {
           token: `Bearer ${token}`,
           "Content-Type": "multipart/form-data",

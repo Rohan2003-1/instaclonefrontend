@@ -16,7 +16,7 @@ const Profile = () => {
 
   const fetchProfile = async () => {
     try {
-      const res = await axios.get("http://localhost:8000/api/v1/profile", {
+      const res = await axios.get("https://instaclonebackend-1.onrender.com/api/v1/profile", {
         headers: { token: `Bearer ${token}` },
       });
       setUser(res.data);
@@ -28,7 +28,7 @@ const Profile = () => {
 
   const fetchMyPosts = async () => {
     try {
-      const res = await axios.get("http://localhost:8000/api/v1/posts", {
+      const res = await axios.get("https://instaclonebackend-1.onrender.com/api/v1/posts", {
         headers: { token: `Bearer ${token}` },
       });
 
@@ -59,7 +59,7 @@ const Profile = () => {
     }
 
     try {
-      const res = await axios.put("http://localhost:8000/api/v1/profile", formData, {
+      const res = await axios.put("https://instaclonebackend-1.onrender.com/api/v1/profile", formData, {
         headers: {
           token: `Bearer ${token}`,
           "Content-Type": "multipart/form-data",

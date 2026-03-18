@@ -16,7 +16,7 @@ const Register = () => {
     setLoading(true);
 
     try {
-      await axios.post("http://localhost:8000/api/v1/register", {
+      await axios.post("https://instaclonebackend-1.onrender.com/api/v1/register", {
         username,
         email,
         password,
